@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let course of courses.courses">
+        {{ course }}
+    </li>
+</ul>
+
+<br><br>
+<input type="text" value="" #course />
+<button (click)="add(course.value)">ADD</button>
