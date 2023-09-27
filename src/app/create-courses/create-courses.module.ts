@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CreateCoursesComponent } from './create-courses.component';
+import { CoursesService } from '../list-courses/courses.service';
 
 
 @NgModule({
@@ -14,6 +15,6 @@ import { CreateCoursesComponent } from './create-courses.component';
   exports: [
     CreateCoursesComponent
   ],
-  providers: []
+  providers: [CoursesService]
 })
 export class CreateCoursesModule { }

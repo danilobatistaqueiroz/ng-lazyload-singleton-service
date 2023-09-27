@@ -1,5 +1,12 @@
+<input type="text" #novoValor>
+<button (click)="add(novoValor.value)">Add Curso</button>
+
+<hr>
+Filtro:
+<input type="text" [(ngModel)]="filtro">
+
 <ul>
-    <li *ngFor="let course of courses.courses">
+    <li *ngFor="let course of courses.courses | filtroArray:filtro">
         {{ course }}
     </li>
 </ul>
@@ -7,3 +14,7 @@
 <br><br>
 <input type="text" value="" #course />
 <button (click)="add(course.value)">ADD</button>
+
+
+<hr>
+<p>{{valor2 | async }}</p>

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../list-courses/courses.service';
+import { interval, take } from 'rxjs';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  //styleUrls: ['./pedidos.component.css']
 })
 export class OrdersComponent implements OnInit {
+
+  filtro: string='';
 
   constructor(public courses:CoursesService) { }
 
@@ -18,4 +20,5 @@ export class OrdersComponent implements OnInit {
     console.log(this.courses.courses);
   }
 
+  valor2 = interval(1000).pipe(take(4));
 }

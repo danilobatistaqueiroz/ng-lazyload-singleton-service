@@ -12,7 +12,8 @@ import { CoursesService } from './courses.service';
     CommonModule
   ],
   exports: [
+    ListCoursesComponent
   ],
-  providers: [CoursesService]
+  providers: []
 })
 export class ListCoursesModule { }
